@@ -28,7 +28,7 @@ def extract_face(filename, required_size=(160, 160)):
         x, y, width, height = result['box']
        
 
-        rect = patches.Rectangle((x, y), width, height, linewidth=2, edgecolor='r', facecolor='none')
+        rect = patches.Rectangle((x, y), width, height, linewidth=2, edgecolor='g', facecolor='none')
         ax.add_patch(rect)
         
     plt.axis('off')
