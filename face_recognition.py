@@ -30,7 +30,9 @@ def extract_face(filename, required_size=(160, 160)):
 
         rect = patches.Rectangle((x, y), width, height, linewidth=2, edgecolor='g', facecolor='none')
         ax.add_patch(rect)
-        
+        confidence_text = f"Accuracy =  {round(result['confidence']*100, 2)}%"
+        ax.text(x+width, height - y - 4, confidence_text, fontsize = 10, color = 'blue')
+    
     plt.axis('off')
     plt.title('Detected Faces')
     plt.show()
